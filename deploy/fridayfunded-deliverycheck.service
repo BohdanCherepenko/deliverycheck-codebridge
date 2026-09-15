@@ -1,0 +1,29 @@
+[Unit]
+Description=DeliveryCheck Codebridge prototype
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=fridayfunded
+Group=fridayfunded
+WorkingDirectory=/opt/fridayfundedprop/deliverycheck
+Environment=NODE_ENV=production
+Environment=NEXT_TELEMETRY_DISABLED=1
+Environment=HOSTNAME=127.0.0.1
+Environment=PORT=3100
+EnvironmentFile=-/etc/fridayfunded/deliverycheck.env
+ExecStart=/opt/fridayfundedprop/.runtimes/node-v24.21.0-linux-x64/bin/node /opt/fridayfundedprop/deliverycheck/server.js
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=20
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/fridayfundedprop/deliverycheck/logs /opt/fridayfundedprop/deliverycheck/.next/cache
+
+[Install]
+WantedBy=multi-user.target

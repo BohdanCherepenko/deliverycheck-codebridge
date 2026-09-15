@@ -1,0 +1,35 @@
+# dependencies
+/node_modules/
+
+# Next.js output
+/.next/
+/out/
+*.tsbuildinfo
+
+# runtime-only data
+**/.env*
+!/.env.example
+!/deploy/deliverycheck.env.example
+*.pem
+*.key
+*.p12
+/logs/*.jsonl
+/tmp/
+
+# generated tooling environments and caches
+/.venv/
+**/__pycache__/
+/.pytest_cache/
+
+# test output
+/coverage/
+/playwright-report/
+/test-results/
+
+# local handoff notes and a superseded duplicate fixture alias
+/NEXT_THREAD.md
+/output/pdf/deliverycheck-order-drk-lem500.pdf
+
+# OS/editor
+.DS_Store
+*.swp

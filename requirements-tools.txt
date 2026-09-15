@@ -1,0 +1,4 @@
+# Only needed to regenerate and inspect the printable test PDFs.
+reportlab==5.0.1
+pypdf==6.18.1
+pdfplumber==0.11.10

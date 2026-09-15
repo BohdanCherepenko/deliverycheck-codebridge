@@ -1,0 +1,5 @@
+allowBuilds:
+  # Native resolver used by eslint-import-resolver; pinned through pnpm-lock.yaml.
+  unrs-resolver: true
+minimumReleaseAgeExclude:
+  - zod@4.6.5
